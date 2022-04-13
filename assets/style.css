@@ -1,4 +1,131 @@
 body{
-        background-color: lemonchiffon;
-        
+        background-color: rebeccapurple;
+        display: flex;
+        flex-direction: column;
+        color: black;
 }
+
+
+.navbar{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    color: white; 
+}
+
+/* .product-containter{
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+
+} */
+.product-showcase{
+    margin-top: 15px;
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+}
+.product-containter{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    
+    /* flex-direction: row; */
+    /* flex-wrap: wrap; */
+    /* border-style: groove; */
+    align-items: center;
+    background-color: #111;
+    width:1330px;
+    height: 950px;
+    margin-bottom: 0px;
+    margin-left: 31px;
+    margin-right: 185.5px;
+    margin-top: 50px;
+    /* flex-direction: row; */
+    padding-left: 25px;
+    padding-right: 25px;
+
+}
+
+.sidenav {
+    height: 85%; /* Full-height: remove this if you want "auto" height */
+    width: 400px; /* Set the width of the sidebar */
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1; /* Stay on top */
+    top: 60px; /* Stay at the top */
+    right: 29px;
+    background-color: #111; /* Black */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 20px;
+  }
+  
+  /* The navigation menu links */
+  .sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  /* Style page content */
+  .main {
+    margin-left: 160px; /* Same as the width of the sidebar */
+    padding: 0px 10px;
+  }
+  
+  .footer-ul{
+    justify-content: center;
+    border-bottom: 10px;
+    display: inline-block;
+    flex-direction: row;
+   
+  }
+  footer{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    box-sizing: border-box;
+    
+  }
+  .card{
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+  }
+  .sub-container{
+    flex-direction: row;
+    display: flex;
+    justify-content: space-around;
+    align-content: space-between;  
+  }
+ 
+  .sub-product{
+    margin-top: 5px;
+    padding: 10px;
+
+  }
+  
+  
+  .footer-ul{
+    justify-content: center;
+    border-bottom: 10px;
+    flex-direction: row;
+    color: white;
+    align-content: space-between;
+  }
+  
+  footer{
+    display: flex;
+    background-color: white;
+    justify-content: center;
+    
+  }
