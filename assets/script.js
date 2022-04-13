@@ -1,14 +1,16 @@
-const settings = {
-	"async": true,
-	"crossDomain": true,
-	"url": "https://walmart.p.rapidapi.com/v2/auto-complete?term=goldteam",
-	"method": "GET",
-	"headers": {
-		"X-RapidAPI-Host": "walmart.p.rapidapi.com",
-		"X-RapidAPI-Key": "581fd4c979mshaaa4f6035ab5483p1cb968jsnf3c78da91faf"
-	}
-};
+var repoList = document.querySelector('#testEl');
+var fetchButton = document.getElementById('fetch-button');
 
-$.ajax(settings).done(function (response) {
-	console.log(response);
-});
+function getApi() {
+  var requestUrl = 'https://upenn-cors-anywhere.herokuapp.com/api.itbook.store%2F1.0%2Fsearch%2Fmongodb';
+    // encodeURIcomponent
+    fetch('https://api.itbook.store/1.0/search/mongodb')
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      console.log(data)
+    });
+}
+
+window.addEventListener('click', getApi);
