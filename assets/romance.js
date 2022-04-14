@@ -1,10 +1,9 @@
 var repoList = document.querySelector('#listEl');
-var fetchButton = document.querySelector('.fetch-button');
-
+var fetchButton2 = document.querySelector('.fetch-button2');
 
 function getApi() {
     // encodeURIcomponent
-    fetch('https://kitsu.io/api/edge/manga?filter[categories]=adventure')
+    fetch('https://kitsu.io/api/edge/manga?filter[categories]=romance')
     .then(function (response) {
       return response.json();
     })
@@ -13,9 +12,11 @@ function getApi() {
         for (var i = 0; i < data.data.length; i++) {
             var listItem = document.createElement('li');
             listItem.innerHTML = data.data[i].attributes.canonicalTitle;
+        
             repoList.appendChild(listItem);
           }
         console.log(data)
     });
 }
-fetchButton.addEventListener('click', getApi);
+
+fetchButton2.addEventListener('click', getApi);
