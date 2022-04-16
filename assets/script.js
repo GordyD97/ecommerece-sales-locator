@@ -1,10 +1,10 @@
 var repoList = document.querySelector('#listEl');
 var fetchButton = document.querySelector('.fetch-button');
-
+var newName = document.querySelector('#newManga');
 
 function getApi() {
     // encodeURIcomponent
-    fetch('https://kitsu.io/api/edge/manga?filter[categories]=adventure')
+    fetch('https://kitsu.io/api/edge/manga?filter[categories]='+newName.value+'')
     .then(function (response) {
       return response.json();
     })
