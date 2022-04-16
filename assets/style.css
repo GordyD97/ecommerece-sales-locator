@@ -31,7 +31,8 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    
+    position: relative;
+    left: 50px;
     /* flex-direction: row; */
     /* flex-wrap: wrap; */
     /* border-style: groove; */
@@ -52,7 +53,7 @@ body{
 .sidenav {
     height: 85%; /* Full-height: remove this if you want "auto" height */
     width: 400px; /* Set the width of the sidebar */
-    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    position: absolute; /* Fixed Sidebar (stay in place on scroll) */
     z-index: 1; /* Stay on top */
     top: 60px; /* Stay at the top */
     right: 29px;
@@ -127,4 +128,12 @@ body{
     display: flex;
     background-color: white;
     justify-content: center;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    background-color: white;
+    border-radius: 20px;
   }
