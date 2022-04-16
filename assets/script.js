@@ -13,7 +13,7 @@ function getApi() {
         for (var i = 0; i < 5; i++) {
             var listItem = document.createElement('li');
             var listImg = document.createElement('img');
-            // listItem.innerHTML = data.data[i].images.webp.image_url;
+            listItem.innerHTML = data.data[i].title;
             listImg.setAttribute('src', data.data[i].images.webp.image_url); 
             listImg.setAttribute('alt', "title");
             repoList.appendChild(listItem);
