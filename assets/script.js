@@ -4,16 +4,20 @@ var newName = document.querySelector('#newManga');
 
 function getApi() {
     // encodeURIcomponent
-    fetch('https://kitsu.io/api/edge/manga?filter[categories]='+newName.value+'')
+    fetch('https://api.jikan.moe/v4/anime?q='+newName.value+'')
     .then(function (response) {
       return response.json();
     })
     .then(function (data) {
         repoList.innerHTML = ''
-        for (var i = 0; i < data.data.length; i++) {
+        for (var i = 0; i < 5; i++) {
             var listItem = document.createElement('li');
-            listItem.innerHTML = data.data[i].attributes.canonicalTitle;
+            var listImg = document.createElement('img');
+            // listItem.innerHTML = data.data[i].images.webp.image_url;
+            listImg.setAttribute('src', data.data[i].images.webp.image_url); 
+            listImg.setAttribute('alt', "title");
             repoList.appendChild(listItem);
+            listItem.appendChild(listImg);
           }
         console.log(data)
     });
