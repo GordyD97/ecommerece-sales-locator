@@ -129,10 +129,10 @@ body{
     justify-content: center;
   }
 
-ul {
-  display:flex;
-  flex-direction:row;
-  list-style-type: none;
-  background-color: white;
-  border-radius: 20px;
-}
+  ul {
+    display:flex;
+    flex-direction:row;
+    list-style-type: none;
+    background-color: white;
+    border-radius: 20px;
+  }
