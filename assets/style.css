@@ -52,14 +52,17 @@ body{
 
 .sidenav {
     height: 85%; /* Full-height: remove this if you want "auto" height */
-    width: 400px; /* Set the width of the sidebar */
+     /* Set the width of the sidebar */
     position: absolute; /* Fixed Sidebar (stay in place on scroll) */
     z-index: 1; /* Stay on top */
-    top: 60px; /* Stay at the top */
+    top: 164px; /* Stay at the top */
     right: 29px;
     background-color: #111; /* Black */
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 20px;
+    margin: 11px;
+    padding: 15px;
+    border-radius: 40px;
   }
   
   /* The navigation menu links */
