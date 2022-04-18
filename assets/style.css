@@ -145,3 +145,7 @@ body{
     background-color: white;
     height:50%;
   }
+
+  #botList {
+    width: 100%;
+  }
