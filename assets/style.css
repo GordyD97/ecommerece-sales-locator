@@ -103,8 +103,11 @@ body{
   }
   .card{
       display: flex;
-      flex-wrap: wrap;
+      flex-wrap:wrap; 
       align-items: center;
+      width: 100%; 
+      overflow: scroll;
+
   }
   .sub-container{
     flex-direction: row;
@@ -150,14 +153,7 @@ body{
     display: flex;
     height:50%;
   }
-  button{
-  background-color: blue;
-  border-radius: 5px;
-  color: white;
-  height: 35px;
-  }
-  
-  .card{
-    /* justify-content: center; */
-    /* align-content: center; */
+
+  #botList {
+    width: 100%;
   }
