@@ -26,6 +26,7 @@ body{
     display: flex;
     flex-direction: row;
     margin: 20px;
+    justify-content: space-between;
 }
 .product-containter{
     display: flex;
@@ -143,6 +144,9 @@ body{
   #listEl li{
     width: 50%;
     background-color: white;
+    border-radius: 20px;
+    flex-direction: row;
+    display: flex;
     height:50%;
   }
 
