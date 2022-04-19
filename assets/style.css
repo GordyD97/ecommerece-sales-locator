@@ -12,7 +12,6 @@ body {
     text-align: center;
     -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color: transparent;
-
 }
 /* body{
         background-color: #5A7072;
@@ -53,6 +52,9 @@ footer{
   box-sizing: border-box;
 }
 
+.card-body {
+  margin: auto;
+}
 .card{
   display: flex;
   flex-wrap:wrap; 
@@ -72,33 +74,33 @@ footer{
 .mapCard {
   display:flex;
   position: relative;
-  left: 600px;
-  top: -220px;
+  left: 10px;
+  top: -500px;
   border-radius: 5px;
 }
 
-.sideMap {
+.mapBack{
+  display:flex;
   position: relative;
-  /* left: 40%; */
-  top: -300px;
-  /* height: 400px; */
-  width: 400px;
-  flex-direction:column;
+  background-color:white;
+  top: -500px;
+  left: 788px;
+  width: 500px;
 }
+/* .sideMap {
+  position: relative;
+  left: 40%;
+  top: -500px;
+  height: 400px;
+  width: 200px;
+  flex-direction:column;
+} */
 
 .txtSmp {
   color:black
 }
 
-.mapBack{
-  position: relative;
-  background-color:white;
-  border-radius: 0px;
-  flex-direction: column;
-  top: -243px;
-  left: 600px;
-  width: 500px;
-}
+
 
 .navbar{
     display: flex;
@@ -127,11 +129,10 @@ footer{
 
 .product-containter{
     display: flex;
-    background-color: black;
+    background-color: rgb(41, 40, 40);
     flex-direction: column;
-    justify-content: space-evenly;
     position: relative;
-    left: 50px;
+    /* left: 50px; */
     /* flex-direction: row; */
     /* flex-wrap: wrap; */
     /* border-style: groove; */
@@ -195,7 +196,7 @@ footer{
       display: flex;
       flex-wrap:wrap; 
       align-items: center;
-      width: 75%; 
+      /* width: 75%;  */
       overflow: scroll;
       overflow: auto;
       position: relative;
@@ -206,6 +207,15 @@ footer{
       border: 1px solid rgba(0,0,0,.125);
       border-radius: 0.25rem;
   }
+
+  .cardTop {
+    top: 20px;
+    width: 30%;
+  }
+
+  /* .cardSide {
+    top: 20px;
+  } */
 
   .sub-container{
     flex-direction: row;
@@ -243,6 +253,11 @@ footer{
     width: 100%;
   }
 
+  #botList.card {
+  position:relative;
+  bottom: -75px;
+  }
+
   #btnFind {
     border-radius: 20px;
     height: 35px;
@@ -267,11 +282,6 @@ footer{
     
   } 
 
-#my-map {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-}
 
 .leaflet-container.leaflet-touch-drag.leaflet-touch-zoom {
     -ms-touch-action: none;
@@ -313,3 +323,7 @@ footer{
     box-sizing: border-box;
 } */
 
+@media screen and (max-width: 768px) {
+  .card {
+    width: 100%;
+  }} 
