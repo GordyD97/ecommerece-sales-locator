@@ -77,6 +77,8 @@ footer{
   left: 10px;
   top: -500px;
   border-radius: 5px;
+  flex-flow:column;
+  align-items:flex-end;
 }
 
 .mapBack{
@@ -323,3 +325,7 @@ footer{
     box-sizing: border-box;
 } */
 
+@media screen and (max-width: 768px) {
+  .card {
+    width: 100%;
+  }} 
