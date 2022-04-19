@@ -47,9 +47,19 @@ body{
   background-color: gray;
   height: 350px;
   width: 550px;
-
-
 }
+.mapCard {
+  display:flex;
+  position: relative;
+  left: 10px;
+  top: -500px;
+  border-radius: 5px;
+  flex-flow:column;
+  align-items:flex-end;
+}
+
+
+
 .fetch-button{
   width: 50px;
 }
@@ -200,3 +210,9 @@ body{
 /* div {
     display: block;
 } */
+
+@media screen and (max-width: 768px) {
+  .card {
+    width: 100%;
+  }} 
+
