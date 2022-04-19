@@ -1,5 +1,18 @@
 
-body {
+.card{
+  display: flex;
+  flex-wrap:wrap; 
+  align-items: center;
+  width: 100%; 
+  height: 500px;
+  position: relative;
+  word-wrap: break-word;
+  background-color: gray;
+  background-clip: border-box;
+  /* border: 1px solid rgba(0,0,0,.125); */
+  border-radius: 0.25rem;
+}
+body{
     background-color: #5A7072;
     display: flex;
     flex-direction: column;
@@ -12,65 +25,29 @@ body {
     text-align: center;
     -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color: transparent;
-}
-/* body{
-        background-color: #5A7072;
-        display: flex;
-        flex-direction: column;
-        color: black;
-} */
 
-element.style {
+}
+.product-containter{
+  display: flex;
+  background-color: black;
+  justify-content: space-evenly;
   position: relative;
-}
-
-div {
-    display: block;
-}
-
-ul {
-  display:flex;
-  /* flex-direction:row; */
-  /* justify-content: center; */
-  list-style-type: none;
-  border-radius: 60px;
-}
-
-footer{
-  display: flex;
-  justify-content: space-around;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-footer{
-  display: flex;
-  position: absoulte;
-  background-color: white;
-  justify-content: center;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-.card-body {
-  margin: auto;
-}
-.card{
-  display: flex;
-  flex-wrap:wrap; 
-  align-items: center;
-  width: 100%; 
-  overflow: scroll;
-  overflow: auto;
-  position: relative;
+  left: 50px;
   flex-direction: column;
-  word-wrap: break-word;
-  background-color: #fff;
-  background-clip: border-box;
-  border: 1px solid rgba(0,0,0,.125);
-  border-radius: 0.25rem;
+  flex-wrap: wrap; 
+  margin-bottom: 0px;
+  margin-left: 31px;
+  margin-right: 185.5px;
+  margin-top: 50px;
+  padding-left: 25px;
+  padding-right: 25px;
+  border-radius: 10px;
+} 
+.titlecard{
+  background-color: gray;
+  height: 350px;
+  width: 550px;
 }
-
 .mapCard {
   display:flex;
   position: relative;
@@ -81,28 +58,11 @@ footer{
   align-items:flex-end;
 }
 
-.mapBack{
-  display:flex;
-  position: relative;
-  background-color:white;
-  top: -500px;
-  left: 788px;
-  width: 500px;
+
+
+.fetch-button{
+  width: 50px;
 }
-/* .sideMap {
-  position: relative;
-  left: 40%;
-  top: -500px;
-  height: 400px;
-  width: 200px;
-  flex-direction:column;
-} */
-
-.txtSmp {
-  color:black
-}
-
-
 
 .navbar{
     display: flex;
@@ -111,75 +71,17 @@ footer{
     color: #D1D1CD; 
 }
 
-.topImg {
-  width: 250px;
-  height: auto;
-}
-
 .product-showcase{
     margin-top: 15px;
     color: white;
     margin: 20px;
     justify-content: space-between;
-    width: 485px;
-}
-
-.mangaBttm {
-  position:relative;
-  bottom: 450px;
-}
-
-.product-containter{
-    display: flex;
-    background-color: rgb(41, 40, 40);
-    flex-direction: column;
-    position: relative;
-    /* left: 50px; */
-    /* flex-direction: row; */
-    /* flex-wrap: wrap; */
-    /* border-style: groove; */
-    /* align-items: center; */
-    /* background-color: #blue; */
-    /* width:1330px; */
-    margin-bottom: 0px;
-    margin-left: 31px;
-    margin-right: 185.5px;
-    margin-top: 50px;
-    /* flex-direction: row; */
-    padding-left: 25px;
-    padding-right: 25px;
-    border-radius: 10px;
-}
-
-/* .sidenav {
-    height: 85%;
-    position: absolute;
-    z-index: 1;
-    top: 164px; 
-    right: 29px;
-    background-color: #111; 
-    overflow-x: hidden;
-    padding-top: 20px;
-    margin: 11px;
-    padding: 15px;
-    border-radius: 40px;
-  } */
-  
-  /* The navigation menu links */
-  .sidenav a {
-    padding: 6px 8px 6px 16px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
+    background-color: gray;
+    width: 1000px;
+    flex-direction: row;
     
-  }
-  
-  /* When you mouse over the navigation links, change their color */
-  .sidenav a:hover {
-    color: #f1f1f1;
-  }
-  
+}
+
   /* Style page content */
   .main {
     margin-left: 160px; /* Same as the width of the sidebar */
@@ -190,15 +92,19 @@ footer{
     justify-content: center;
     border-bottom: 10px;
     display: inline-block;
-    flex-direction: row;
-   
+    flex-direction: row; 
   }
-  
+  footer{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    box-sizing: border-box;   
+  }
   .card{
       display: flex;
       flex-wrap:wrap; 
       align-items: center;
-      /* width: 75%;  */
+      width: 100%; 
       overflow: scroll;
       overflow: auto;
       position: relative;
@@ -209,30 +115,6 @@ footer{
       border: 1px solid rgba(0,0,0,.125);
       border-radius: 0.25rem;
   }
-
-  .cardTop {
-    top: 20px;
-    width: 30%;
-  }
-
-  /* .cardSide {
-    top: 20px;
-  } */
-
-  .sub-container{
-    flex-direction: row;
-    display: flex;
-    justify-content: space-around;
-    align-content: space-between;  
-  }
- 
-  .sub-product{
-    margin-top: 5px;
-    padding: 10px;
-
-  }
-  
-  
   .footer-ul{
     justify-content: center;
     border-bottom: 10px;
@@ -240,8 +122,20 @@ footer{
     color: white;
     align-content: space-between;
   }
-  
-  
+   footer{
+    display: flex;
+    position: absoulte;
+    background-color: white;
+    justify-content: center;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  ul {
+    display:flex;
+    list-style-type: none;
+    border-radius: 60px;
+  }
+
   #listEl li{
     width: 50%;
     background-color: white;
@@ -253,11 +147,6 @@ footer{
 
   #botList {
     width: 100%;
-  }
-
-  #botList.card {
-  position:relative;
-  bottom: -75px;
   }
 
   #btnFind {
@@ -275,41 +164,34 @@ footer{
     background-color:#5A7072;
   }
    
-  
-  #my-map {
+  element.style {
+    position: relative;
+}
+#my-map {
     width: 100%;
     height: 100%;
     margin: 0;
-
-    
-  } 
-
-
+}
 .leaflet-container.leaflet-touch-drag.leaflet-touch-zoom {
     -ms-touch-action: none;
     touch-action: none;
 }
-
 .leaflet-container.leaflet-touch-drag {
     -ms-touch-action: pinch-zoom;
     touch-action: none;
     touch-action: pinch-zoom;
 }
-
 .leaflet-container.leaflet-touch-zoom {
     -ms-touch-action: pan-x pan-y;
     touch-action: pan-x pan-y;
 }
-
 .leaflet-container {
     font: 12px/1.5 "Helvetica Neue", Arial, Helvetica, sans-serif;
 }
-
 .leaflet-container {
     background: #ddd;
     outline: 0;
 }
-
 .leaflet-grab {
     cursor: -webkit-grab;
     cursor: -moz-grab;
@@ -321,11 +203,16 @@ footer{
 .leaflet-container {
     overflow: hidden;
 }
-/* *, ::after, ::before {
+*, ::after, ::before {
     box-sizing: border-box;
+}
+/* user agent stylesheet */
+/* div {
+    display: block;
 } */
 
 @media screen and (max-width: 768px) {
   .card {
     width: 100%;
   }} 
+
