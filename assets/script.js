@@ -67,4 +67,16 @@ fetch("https://api.geoapify.com/v2/places?categories=commercial.books&filter=cir
     id: "osm-bright",
   }).addTo(map);
 
+  const markerIcon = L.icon({
+    iconUrl: `https://api.geoapify.com/v1/icon/?type=material&color=red&icon=lightbulb&iconType=awesome&apiKey=3f037f71cb1e42579fb3ff5aa319aeee`,
+    iconSize: [31, 46], // size of the icon
+    iconAnchor: [15.5, 42], // point of the icon which will correspond to marker's location
+    popupAnchor: [0, -45] // point from which the popup should open relative to the iconAnchor
+  });
+  const storeMarker = L.marker([39.8694, -75.3824], {
+    icon: markerIcon
+
+    
+  }).addTo(map);
+
   
