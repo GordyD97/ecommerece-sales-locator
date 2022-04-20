@@ -28,29 +28,28 @@ function getApi() {
 fetchButton.addEventListener('click', getApi);
 
 // DO NOT UNCOMMENT!!!! WILL BREAK SHIT!!!!! WIP!!
-// var randoList = document.querySelector('#rando');
-// var randoUrl = "https://api.jikan.moe/v4/random/manga"
-
-// window.onload =function getApi() {
-//   fetch('https://api.jikan.moe/v4/random/manga')
-//   .then(function (response){
-//     return response.json();
-//   })
-//   .then(function(data){
-//     for (i = 0; i < 1; i++)
-//     var listItem = document.createElement('li');
-//             var listImg = document.createElement('img');
-//             var listText = document.createElement('p');
-//             listImg.setAttribute('src', data.data[i].images.webp.image_url); 
-//             listImg.setAttribute('alt', "title");
-            
-//             listItem.appendChild(listImg);
-//             listText.textContent = data.data[i].title;
-//             listItem.appendChild(listText);
-//             randoList.appendChild(listItem);
-//   })
-// }
-
+// var topList = document.querySelector('#rando')
+// window.addEventListener("load", rando);
+// fetch('https://api.jikan.moe/v4/random/manga')
+// .then(function (response) {
+//   return response.json();
+// })
+// .then(function (data) {
+//     repoList.innerHTML = ''
+//     for (var i = 0; i < 1; i++) {
+//         var listItem = document.createElement('li');
+//         var listImg = document.createElement('img');
+//         var listText = document.createElement('p');
+//         listImg.setAttribute('src', data[i].images.webp.image_url); 
+//         listImg.setAttribute('alt', "title");
+        
+//         listItem.appendChild(listImg);
+//         listText.textContent = data[i].title;
+//         listItem.appendChild(listText);
+//         topList.appendChild(listItem);
+//       }
+//     console.log("Hmmmm")
+// });
 
 document.getElementById("newManga")
     .addEventListener("keyup", function(event) {
