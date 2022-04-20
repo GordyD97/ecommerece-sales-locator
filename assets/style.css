@@ -27,6 +27,25 @@ body{
     -webkit-tap-highlight-color: transparent;
 
 }
+
+element.style {
+  position: relative;
+}
+
+div {
+    display: block;
+}
+
+ul {
+  display:flex;
+  /* flex-direction:row; */
+  /* justify-content: center; */
+  list-style-type: none;
+  border-radius: 60px;
+}
+
+
+}
 .product-containter{
   display: flex;
   background-color: black;
@@ -48,6 +67,14 @@ body{
   height: 350px;
   width: 550px;
 }
+
+
+.dasMap {
+  background-color: white;
+  width: 500px;
+}
+
+
 .mapCard {
   display:flex;
   position: relative;
@@ -56,6 +83,21 @@ body{
   border-radius: 5px;
   flex-flow:column;
   align-items:flex-end;
+}
+
+
+.mapBack{
+  display:flex;
+  position: relative;
+  background-color:white;
+  top: -500px;
+  left: 788px;
+  width: 500px;
+}
+
+
+.txtSmp {
+  color:black
 }
 
 
@@ -81,6 +123,24 @@ body{
     flex-direction: row;
     
 }
+
+  
+  /* The navigation menu links */
+  .sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+
 
   /* Style page content */
   .main {
@@ -149,15 +209,23 @@ body{
     width: 100%;
   }
 
+
+  #botList.card {
+  position:relative;
+  bottom: -75px;
+
   #btnFind {
     border-radius: 20px;
     height: 35px;
     width: 70px;
+
   }
 
   .searchBtn {
     background-color:#5A7072;
     color:white;
+    border-radius: 10px;
+    height: 20px;
   }
 
   .searchBtn:hover {
@@ -203,6 +271,9 @@ body{
 .leaflet-container {
     overflow: hidden;
 }
+
+
+
 *, ::after, ::before {
     box-sizing: border-box;
 }
@@ -210,6 +281,7 @@ body{
 /* div {
     display: block;
 } */
+
 
 @media screen and (max-width: 768px) {
   .card {
