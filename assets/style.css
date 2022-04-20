@@ -1,18 +1,5 @@
 
-.card{
-  display: flex;
-  flex-wrap:wrap; 
-  align-items: center;
-  width: 100%; 
-  height: 500px;
-  position: relative;
-  word-wrap: break-word;
-  background-color: gray;
-  background-clip: border-box;
-  /* border: 1px solid rgba(0,0,0,.125); */
-  border-radius: 0.25rem;
-}
-body{
+body {
     background-color: #5A7072;
     display: flex;
     flex-direction: column;
@@ -25,7 +12,6 @@ body{
     text-align: center;
     -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color: transparent;
-
 }
 
 element.style {
@@ -44,36 +30,45 @@ ul {
   border-radius: 60px;
 }
 
-
-}
-.product-containter{
+footer{
   display: flex;
-  background-color: black;
-  justify-content: space-evenly;
-  position: relative;
-  left: 50px;
-  flex-direction: column;
-  flex-wrap: wrap; 
-  margin-bottom: 0px;
-  margin-left: 31px;
-  margin-right: 185.5px;
-  margin-top: 50px;
-  padding-left: 25px;
-  padding-right: 25px;
-  border-radius: 10px;
-} 
-.titlecard{
-  background-color: gray;
-  height: 350px;
-  width: 550px;
+  justify-content: space-around;
+  width: 100%;
+  box-sizing: border-box;
 }
 
+footer{
+  display: flex;
+  position: absoulte;
+  background-color: white;
+  justify-content: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.card-body {
+  margin: auto;
+}
+.card{
+  display: flex;
+  flex-wrap:wrap; 
+  align-items: center;
+  width: 100%; 
+  overflow: scroll;
+  overflow: auto;
+  position: relative;
+  flex-direction: column;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0,0,0,.125);
+  border-radius: 0.25rem;
+}
 
 .dasMap {
   background-color: white;
   width: 500px;
 }
-
 
 .mapCard {
   display:flex;
@@ -84,7 +79,6 @@ ul {
   flex-flow:column;
   align-items:flex-end;
 }
-
 
 .mapBack{
   display:flex;
@@ -102,10 +96,6 @@ ul {
 
 
 
-.fetch-button{
-  width: 50px;
-}
-
 .navbar{
     display: flex;
     width: 100%;
@@ -113,17 +103,45 @@ ul {
     color: #D1D1CD; 
 }
 
+.topImg {
+  width: 250px;
+  height: auto;
+}
+
 .product-showcase{
     margin-top: 15px;
     color: white;
     margin: 20px;
     justify-content: space-between;
-    background-color: gray;
-    width: 1000px;
-    flex-direction: row;
-    
+    width: 485px;
 }
 
+.mangaBttm {
+  position:relative;
+  bottom: 450px;
+}
+
+.product-containter{
+    display: flex;
+    background-color: rgb(41, 40, 40);
+    flex-direction: column;
+    position: relative;
+    /* left: 50px; */
+    /* flex-direction: row; */
+    /* flex-wrap: wrap; */
+    /* border-style: groove; */
+    /* align-items: center; */
+    /* background-color: #blue; */
+    /* width:1330px; */
+    margin-bottom: 0px;
+    margin-left: 31px;
+    margin-right: 185.5px;
+    margin-top: 50px;
+    /* flex-direction: row; */
+    padding-left: 25px;
+    padding-right: 25px;
+    border-radius: 10px;
+}
   
   /* The navigation menu links */
   .sidenav a {
@@ -140,8 +158,6 @@ ul {
     color: #f1f1f1;
   }
   
-
-
   /* Style page content */
   .main {
     margin-left: 160px; /* Same as the width of the sidebar */
@@ -152,19 +168,15 @@ ul {
     justify-content: center;
     border-bottom: 10px;
     display: inline-block;
-    flex-direction: row; 
+    flex-direction: row;
+   
   }
-  footer{
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-    box-sizing: border-box;   
-  }
+  
   .card{
       display: flex;
       flex-wrap:wrap; 
       align-items: center;
-      width: 100%; 
+      /* width: 75%;  */
       overflow: scroll;
       overflow: auto;
       position: relative;
@@ -175,6 +187,30 @@ ul {
       border: 1px solid rgba(0,0,0,.125);
       border-radius: 0.25rem;
   }
+ /* I just had too */
+  .cardTop {
+    top: 20px;
+    width: 30%;
+  }
+
+  /* .cardSide {
+    top: 20px;
+  } */
+
+  .sub-container{
+    flex-direction: row;
+    display: flex;
+    justify-content: space-around;
+    align-content: space-between;  
+  }
+ 
+  .sub-product{
+    margin-top: 5px;
+    padding: 10px;
+
+  }
+  
+  
   .footer-ul{
     justify-content: center;
     border-bottom: 10px;
@@ -182,20 +218,8 @@ ul {
     color: white;
     align-content: space-between;
   }
-   footer{
-    display: flex;
-    position: absoulte;
-    background-color: white;
-    justify-content: center;
-    width: 100%;
-    box-sizing: border-box;
-  }
-  ul {
-    display:flex;
-    list-style-type: none;
-    border-radius: 60px;
-  }
-
+  
+  
   #listEl li{
     width: 50%;
     background-color: white;
@@ -209,16 +233,9 @@ ul {
     width: 100%;
   }
 
-
   #botList.card {
   position:relative;
   bottom: -75px;
-
-  #btnFind {
-    border-radius: 20px;
-    height: 35px;
-    width: 70px;
-
   }
 
   .searchBtn {
@@ -232,34 +249,41 @@ ul {
     background-color:#5A7072;
   }
    
-  element.style {
-    position: relative;
-}
-#my-map {
+  
+  #my-map {
     width: 100%;
     height: 100%;
     margin: 0;
-}
+
+    
+  } 
+
+
 .leaflet-container.leaflet-touch-drag.leaflet-touch-zoom {
     -ms-touch-action: none;
     touch-action: none;
 }
+
 .leaflet-container.leaflet-touch-drag {
     -ms-touch-action: pinch-zoom;
     touch-action: none;
     touch-action: pinch-zoom;
 }
+
 .leaflet-container.leaflet-touch-zoom {
     -ms-touch-action: pan-x pan-y;
     touch-action: pan-x pan-y;
 }
+
 .leaflet-container {
     font: 12px/1.5 "Helvetica Neue", Arial, Helvetica, sans-serif;
 }
+
 .leaflet-container {
     background: #ddd;
     outline: 0;
 }
+
 .leaflet-grab {
     cursor: -webkit-grab;
     cursor: -moz-grab;
@@ -273,18 +297,7 @@ ul {
 }
 
 
-
-*, ::after, ::before {
-    box-sizing: border-box;
-}
-/* user agent stylesheet */
-/* div {
-    display: block;
-} */
-
-
 @media screen and (max-width: 768px) {
   .card {
     width: 100%;
   }} 
-
