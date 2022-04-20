@@ -13,12 +13,6 @@ body {
     -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color: transparent;
 }
-/* body{
-        background-color: #5A7072;
-        display: flex;
-        flex-direction: column;
-        color: black;
-} */
 
 element.style {
   position: relative;
@@ -71,12 +65,19 @@ footer{
   border-radius: 0.25rem;
 }
 
+.dasMap {
+  background-color: white;
+  width: 500px;
+}
+
 .mapCard {
   display:flex;
   position: relative;
   left: 10px;
   top: -500px;
   border-radius: 5px;
+  flex-flow:column;
+  align-items:flex-end;
 }
 
 .mapBack{
@@ -87,14 +88,7 @@ footer{
   left: 788px;
   width: 500px;
 }
-/* .sideMap {
-  position: relative;
-  left: 40%;
-  top: -500px;
-  height: 400px;
-  width: 200px;
-  flex-direction:column;
-} */
+
 
 .txtSmp {
   color:black
@@ -148,20 +142,6 @@ footer{
     padding-right: 25px;
     border-radius: 10px;
 }
-
-/* .sidenav {
-    height: 85%;
-    position: absolute;
-    z-index: 1;
-    top: 164px; 
-    right: 29px;
-    background-color: #111; 
-    overflow-x: hidden;
-    padding-top: 20px;
-    margin: 11px;
-    padding: 15px;
-    border-radius: 40px;
-  } */
   
   /* The navigation menu links */
   .sidenav a {
@@ -207,7 +187,7 @@ footer{
       border: 1px solid rgba(0,0,0,.125);
       border-radius: 0.25rem;
   }
-
+ /* I just had too */
   .cardTop {
     top: 20px;
     width: 30%;
@@ -258,15 +238,11 @@ footer{
   bottom: -75px;
   }
 
-  #btnFind {
-    border-radius: 20px;
-    height: 35px;
-    width: 70px;
-  }
-
   .searchBtn {
     background-color:#5A7072;
     color:white;
+    border-radius: 10px;
+    height: 20px;
   }
 
   .searchBtn:hover {
@@ -319,9 +295,7 @@ footer{
 .leaflet-container {
     overflow: hidden;
 }
-/* *, ::after, ::before {
-    box-sizing: border-box;
-} */
+
 
 @media screen and (max-width: 768px) {
   .card {
