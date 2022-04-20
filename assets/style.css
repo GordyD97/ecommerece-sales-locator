@@ -253,12 +253,6 @@ footer{
   .searchBtn:hover {
     background-color:#5A7072;
   }
-   
-  
-  /* #my-map {
-    left:
-  }  */
-
 
 .leaflet-container.leaflet-touch-drag.leaflet-touch-zoom {
     -ms-touch-action: none;
