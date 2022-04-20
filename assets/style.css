@@ -126,7 +126,7 @@ footer{
   bottom: 450px;
 }
 
-.product-containter{
+.product-container{
     display: flex;
     background-color: rgb(41, 40, 40);
     flex-direction: column;
@@ -292,22 +292,18 @@ footer{
 }
 
 
-/* @media only screen and (max-width: 768px) {
+ /* @media screen and (max-width: 900px) and (min-width: 600px), (min-width: 1100px) {
   .mapSty {
-  display:flex;
-  position: relative;
-  left: 10px;
-  top: -20px;
-  border-radius: 5px;
-  flex-flow:column;
-  align-items:flex-end;
-  width: 300px;
-  height: 150px;
+    width: 100%;
   }
+ } */
 
-  /* .mapSty {
-    height: 40px;
-    width: -200px;
-  } */
-/*} */
-
+ @media screen and (max-width: 768px) {
+    section,
+    article {
+      flex-direction: column;
+   }
+   .mapSty {
+     order: 3;
+   }
+  }
