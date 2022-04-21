@@ -4,7 +4,7 @@ var newName = document.querySelector('#newManga');
 
 function getApi() {
     // encodeURIcomponent
-    fetch('https://api.jikan.moe/v4/anime?q='+newName.value+'')
+    fetch('https://api.jikan.moe/v4/manga?q='+newName.value+'')
     .then(function (response) {
       return response.json();
     })
@@ -26,30 +26,6 @@ function getApi() {
     });
 }
 fetchButton.addEventListener('click', getApi);
-
-// DO NOT UNCOMMENT!!!! WILL BREAK SHIT!!!!! WIP!!
-// var topList = document.querySelector('#rando')
-// window.addEventListener("load", rando);
-// fetch('https://api.jikan.moe/v4/random/manga')
-// .then(function (response) {
-//   return response.json();
-// })
-// .then(function (data) {
-//     repoList.innerHTML = ''
-//     for (var i = 0; i < 1; i++) {
-//         var listItem = document.createElement('li');
-//         var listImg = document.createElement('img');
-//         var listText = document.createElement('p');
-//         listImg.setAttribute('src', data[i].images.webp.image_url); 
-//         listImg.setAttribute('alt', "title");
-        
-//         listItem.appendChild(listImg);
-//         listText.textContent = data[i].title;
-//         listItem.appendChild(listText);
-//         topList.appendChild(listItem);
-//       }
-//     console.log("Hmmmm")
-// });
 
 document.getElementById("newManga")
     .addEventListener("keyup", function(event) {
