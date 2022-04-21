@@ -46,9 +46,6 @@ footer{
   box-sizing: border-box;
 }
 
-.card-body {
-  margin: auto;
-}
 .card{
   display: flex;
   flex-wrap:wrap; 
@@ -126,6 +123,7 @@ footer{
   bottom: 350px;
 }
 
+
 .product-container{
     display: flex;
     background-color: rgb(53, 52, 52);
@@ -139,7 +137,6 @@ footer{
     padding-right: 25px;
     border-radius: 10px;
 }
-  
   /* The navigation menu links */
   .sidenav a {
     padding: 6px 8px 6px 16px;
