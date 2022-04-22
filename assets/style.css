@@ -29,7 +29,7 @@ ul {
   list-style-type: none;
   border-radius: 60px;
 }
-
+/* unused stylesheet for footer */
 footer{
   display: flex;
   justify-content: space-around;
@@ -45,7 +45,7 @@ footer{
   width: 100%;
   box-sizing: border-box;
 }
-
+/* stylesheet for "Manga of the Day" and "Top 5" panels */
 .card{
   display: flex;
   flex-wrap:wrap; 
@@ -61,12 +61,12 @@ footer{
   border: 1px solid rgba(0,0,0,.125);
   border-radius: 0.25rem;
 }
-
+/* text for map panel */
 .dasMap {
   background-color: white;
   width: 500px;
 }
-
+/* stylesheet for map panel */
 .mapCard {
   display:flex;
   position: relative;
@@ -76,7 +76,7 @@ footer{
   flex-flow:column;
   align-items:flex-end;
 }
-
+/* scaling of map card */
 .mapSty {
   width: 500px; 
   height: 350px;
@@ -97,14 +97,14 @@ footer{
 }
 
 
-
+/* stylesheet for navbar (unused) */
 .navbar{
     display: flex;
     width: 100%;
     align-items: center;
     color: #D1D1CD; 
 }
-
+/* Scaling of "Manga of the Day" panel*/
 .topImg {
   width: 250px;
   height: auto;
@@ -117,13 +117,13 @@ footer{
     justify-content: space-between;
     width: 485px;
 }
-
+/* Location of "Top 5" panel on the page */
 .mangaBttm {
   position:relative;
   bottom: 350px;
 }
 
-
+/* Stylesheet for page content */
 .product-container{
     display: flex;
     background-color: rgb(53, 52, 52);
@@ -165,7 +165,7 @@ footer{
     flex-direction: row;
    
   }
-  
+  /* media queries for "Top 5" and "Manga of the Day" panels */
   .card{
       display: flex;
       flex-wrap:wrap; 
@@ -181,7 +181,7 @@ footer{
       border: 1px solid rgba(0,0,0,.125);
       border-radius: 0.25rem;
   }
- 
+ /* padding and margining for "Manga of the Day" panel */
   .cardTop {
     top: 20px;
     width: 30%;
@@ -209,7 +209,7 @@ footer{
     align-content: space-between;
   }
   
-  
+  /* "Top 5" panel stylesheet */
   #listEl li{
     width: 50%;
     background-color: white;
@@ -218,23 +218,23 @@ footer{
     text-align:center;
     font-family:Arial, Helvetica, sans-serif;
   }
-
+/* padding for "Top 5" panel */
   #botList {
     width: 100%;
   }
-
+/* location of "Top 5" panel on page */
   #botList.card {
   position:relative;
   bottom: -75px;
   }
-
+/* Search button stylesheet */
   .searchBtn {
     background-color:#5A7072;
     color:white;
     border-radius: 10px;
     height: 20px;
   }
-
+/* Color of search button when cursor is hovering over it */
   .searchBtn:hover {
     background-color:#5A7072;
   }
