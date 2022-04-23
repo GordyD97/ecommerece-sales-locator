@@ -17,3 +17,8 @@ Credits:
 - Gordon Draine
 - Steffan Carter
 - Chris McHenry
+
+
+Deployed Site : https://gordyd97.github.io/ecommerece-sales-locator/
+
+![screen shot of site](./images/proj1sitePNG.PNG)
