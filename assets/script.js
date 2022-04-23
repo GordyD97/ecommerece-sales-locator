@@ -6,26 +6,26 @@ var newName = document.querySelector('#newManga');
 
 function getApi() {
   // encodeURIcomponent
-  fetch('https://api.jikan.moe/v4/manga?q='+newName.value+'&sfw')
-  .then(function (response) {
-    return response.json();
-  })
-  .then(function (data) {
-    repoList.innerHTML = ''
-    for (var i = 0; i < 5; i++) {
-      var listItem = document.createElement('li');
-      var listImg = document.createElement('img');
-      var listText = document.createElement('p');
-      listImg.setAttribute('src', data.data[i].images.webp.image_url);
-      listImg.setAttribute('alt', "title");
+  fetch('https://api.jikan.moe/v4/manga?q=' + newName.value + '&sfw')
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      repoList.innerHTML = ''
+      for (var i = 0; i < 5; i++) {
+        var listItem = document.createElement('li');
+        var listImg = document.createElement('img');
+        var listText = document.createElement('p');
+        listImg.setAttribute('src', data.data[i].images.webp.image_url);
+        listImg.setAttribute('alt', "title");
 
-      listItem.appendChild(listImg);
-      listText.textContent = data.data[i].title;
-      listItem.appendChild(listText);
-      repoList.appendChild(listItem);
-    }
-    // console.log(data)
-  });
+        listItem.appendChild(listImg);
+        listText.textContent = data.data[i].title;
+        listItem.appendChild(listText);
+        repoList.appendChild(listItem);
+      }
+      // console.log(data)
+    });
 }
 fetchButton.addEventListener('click', getApi);
 
@@ -38,9 +38,9 @@ fetch("https://api.geoapify.com/v2/places?categories=commercial.books&filter=cir
   // .then(result => console.log(result))
   .catch(error => console.log('error', error));
 
-var map = L.map("my-map").setView([39.8694, -75.3824], 10);
+var map = L.map("my-map").setView([41.257160, -95.995102], 2.5);
 
-// Get your own API Key on https://myprojects.geoapify.com
+
 var myAPIKey = "3f037f71cb1e42579fb3ff5aa319aeee";
 
 // Retina displays require different mat tiles quality
@@ -67,11 +67,11 @@ const markerIcon = L.icon({
   iconAnchor: [15.5, 42], // point of the icon which will correspond to marker's location
   popupAnchor: [0, -45] // point from which the popup should open relative to the iconAnchor
 });
-const storeMarker = L.marker([39.8694, -75.3824], {
-  icon: markerIcon
+// const storeMarker = L.marker([39.8694, -75.3824], {
+//   icon: markerIcon
 
 
-}).addTo(map);
+// }).addTo(map);
 
 document.querySelector("#autocomplete-container")
 
@@ -82,10 +82,10 @@ document.querySelector("#autocomplete-container")
 
 
 var containerElement = document.querySelector('#conEl')
- var searchBtn = document.getElementById('searchBtn'); 
-var addressAutocomplete = function() {
- console.log('hello');
- 
+var searchBtn = document.getElementById('searchBtn');
+var addressAutocomplete = function () {
+  console.log('hello');
+
 
   const currentValue = document.querySelector('.zipcode-input').value;
   var inputElement = document.createElement("input");
@@ -99,62 +99,80 @@ var addressAutocomplete = function() {
   const DEBOUNCE_DELAY = 300;
   var inputElement = document.querySelector('#input1');
   /* Process a user input: */
-  
-    
 
-    // Cancel previous timeout
-    // if (currentTimeout) {
-    //   clearTimeout(currentTimeout);
-    // }
 
-    // // Cancel previous request promise
-    // if (currentPromiseReject) {
-    //   currentPromiseReject({
-    //     canceled: true
-    //   });
-    // }
 
-    // Skip empty or short address strings
-    // if (!currentValue || currentValue.length < MIN_ADDRESS_LENGTH) {
-    //   return false;
-    // }
+  // Cancel previous timeout
+  // if (currentTimeout) {
+  //   clearTimeout(currentTimeout);
+  // }
 
-    /* Call the Address Autocomplete API with a delay */
-    currentTimeout = setTimeout(() => {
-      currentTimeout = null;
+  // // Cancel previous request promise
+  // if (currentPromiseReject) {
+  //   currentPromiseReject({
+  //     canceled: true
+  //   });
+  // }
 
-      /* Create a new promise and send geocoding request */
-      const promise = new Promise((resolve, reject) => {
-        currentPromiseReject = reject;
+  // Skip empty or short address strings
+  // if (!currentValue || currentValue.length < MIN_ADDRESS_LENGTH) {
+  //   return false;
+  // }
 
-        // Get an API Key on https://myprojects.geoapify.com
-        const apiKey = "3f037f71cb1e42579fb3ff5aa319aeee";
+  /* Call the Address Autocomplete API with a delay */
+  currentTimeout = setTimeout(() => {
+    currentTimeout = null;
 
-        var url = `https://api.geoapify.com/v1/geocode/autocomplete?text=${encodeURIComponent(currentValue)}&format=json&limit=5&apiKey=${apiKey}`;
+    /* Create a new promise and send geocoding request */
+    const promise = new Promise((resolve, reject) => {
+      currentPromiseReject = reject;
 
-        fetch(url)
-          .then(response => {
-            currentPromiseReject = null;
+      // Get an API Key on https://myprojects.geoapify.com
+      const apiKey = "3f037f71cb1e42579fb3ff5aa319aeee";
 
-            // check if the call was successful
-            if (response.ok) {
-              response.json().then(data => resolve(data));
-            } else {
-              response.json().then(data => reject(data));
-            }
-          });
-      });
+      var url = `https://api.geoapify.com/v1/geocode/autocomplete?text=${encodeURIComponent(currentValue)}&format=json&limit=5&apiKey=${apiKey}`;
 
-      promise.then((data) => {
-        // here we get address suggestions
-        console.log(data);
-      }, (err) => {
-        if (!err.canceled) {
-          console.log(err);
-        }
-      });
-    }, DEBOUNCE_DELAY);
-  
+      fetch(url)
+        .then(response => {
+          currentPromiseReject = null;
+
+          // check if the call was successful
+          if (response.ok) {
+            response.json().then(data => resolve(data));
+          } else {
+            response.json().then(data => reject(data));
+          }
+        });
+    });
+
+    promise.then((data) => {
+      // here we get address suggestions
+      if ( map ) {
+        console.log('mapexist');
+      }
+      // var map = L.map("my-map").setView([data.results[0].lat, data.results[0].lon], 10);
+      map.flyTo(new L.LatLng(data.results[0].lat, data.results[0].lon),10)
+      console.log(data);
+      L.tileLayer(isRetina ? retinaUrl : baseUrl, {
+        attribution:
+          'Powered by <a href="https://www.geoapify.com/" target="_blank">Geoapify</a> | © OpenStreetMap <a href="https://www.openstreetmap.org/copyright" target="_blank">contributors</a>',
+        apiKey: myAPIKey,
+        maxZoom: 40,
+        id: "osm-bright",
+      }).addTo(map);
+      var storeMarker = L.marker([data.results[0].lat, data.results[0].lon], {
+          icon: markerIcon
+        
+        
+        }).addTo(map);
+
+    }, (err) => {
+      if (!err.canceled) {
+        console.log(err);
+      }
+    });
+  }, DEBOUNCE_DELAY);
+
 }
 document.addEventListener('DOMContentLoaded', function () {
   searchBtn.addEventListener("click", addressAutocomplete)
