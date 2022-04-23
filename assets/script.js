@@ -23,7 +23,7 @@ function getApi() {
         listItem.appendChild(listText);
         repoList.appendChild(listItem);
       }
-      console.log(data)
+      // console.log(data)
     });
 }
 fetchButton.addEventListener('click', getApi);
@@ -43,7 +43,7 @@ var requestOptions = {
 
 fetch("https://api.geoapify.com/v2/places?categories=commercial.books&filter=circle:-75.371964,39.887065,9000&bias=proximity:-75.371964,39.887065&limit=20&apiKey=3f037f71cb1e42579fb3ff5aa319aeee", requestOptions)
   .then(response => response.json())
-  .then(result => console.log(result))
+  // .then(result => console.log(result))
   .catch(error => console.log('error', error));
 
 var map = L.map("my-map").setView([39.8694, -75.3824], 10);
@@ -88,79 +88,84 @@ document.querySelector("#autocomplete-container")
 
 // }
 
-addressAutocomplete(document.getElementById("autocomplete-container"));
 
 
-function addressAutocomplete(containerElement, callback, options) {
-  // var inputElement = document.createElement("input");
-  // inputElement.setAttribute("type", "text");
-  // inputElement.setAttribute("placeholder", "Enter an address here");
-  // containerElement.appendChild(inputElement);
+ var searchBtn = document.getElementById('searchBtn'); 
+var addressAutocomplete = function() {
+ console.log('hello');
+ 
+ 
+  // const currentValue = document.querryselector('.zipcode-input').value;
+  // // var inputElement = document.createElement("input");
+  // // inputElement.setAttribute("type", "text");
+  // // inputElement.setAttribute("placeholder", "Enter an address here");
+  // // containerElement.appendChild(inputElement);
 
-  var currentItems;
+  // var currentItems;
 
-  const MIN_ADDRESS_LENGTH = 3;
-  const DEBOUNCE_DELAY = 300;
-  var inputElement = document.querySelector('#input1');
-  /* Process a user input: */
-  inputElement.addEventListener("input", function (e) {
-    const currentValue = this.value;
+  // const MIN_ADDRESS_LENGTH = 3;
+  // const DEBOUNCE_DELAY = 300;
+  // // var inputElement = document.querySelector('#input1');
+  // /* Process a user input: */
+  
+    
 
-    // Cancel previous timeout
-    if (currentTimeout) {
-      clearTimeout(currentTimeout);
-    }
+  //   // Cancel previous timeout
+  //   if (currentTimeout) {
+  //     clearTimeout(currentTimeout);
+  //   }
 
-    // Cancel previous request promise
-    if (currentPromiseReject) {
-      currentPromiseReject({
-        canceled: true
-      });
-    }
+  //   // Cancel previous request promise
+  //   if (currentPromiseReject) {
+  //     currentPromiseReject({
+  //       canceled: true
+  //     });
+  //   }
 
-    // Skip empty or short address strings
-    if (!currentValue || currentValue.length < MIN_ADDRESS_LENGTH) {
-      return false;
-    }
+  //   // Skip empty or short address strings
+  //   if (!currentValue || currentValue.length < MIN_ADDRESS_LENGTH) {
+  //     return false;
+  //   }
 
-    /* Call the Address Autocomplete API with a delay */
-    currentTimeout = setTimeout(() => {
-      currentTimeout = null;
+  //   /* Call the Address Autocomplete API with a delay */
+  //   currentTimeout = setTimeout(() => {
+  //     currentTimeout = null;
 
-      /* Create a new promise and send geocoding request */
-      const promise = new Promise((resolve, reject) => {
-        currentPromiseReject = reject;
+  //     /* Create a new promise and send geocoding request */
+  //     const promise = new Promise((resolve, reject) => {
+  //       currentPromiseReject = reject;
 
-        // Get an API Key on https://myprojects.geoapify.com
-        const apiKey = "3f037f71cb1e42579fb3ff5aa319aeee";
+  //       // Get an API Key on https://myprojects.geoapify.com
+  //       const apiKey = "3f037f71cb1e42579fb3ff5aa319aeee";
 
-        var url = `https://api.geoapify.com/v1/geocode/autocomplete?text=${encodeURIComponent(currentValue)}&format=json&limit=5&apiKey=${apiKey}`;
+  //       var url = `https://api.geoapify.com/v1/geocode/autocomplete?text=${encodeURIComponent(currentValue)}&format=json&limit=5&apiKey=${apiKey}`;
 
-        fetch(url)
-          .then(response => {
-            currentPromiseReject = null;
+  //       fetch(url)
+  //         .then(response => {
+  //           currentPromiseReject = null;
 
-            // check if the call was successful
-            if (response.ok) {
-              response.json().then(data => resolve(data));
-            } else {
-              response.json().then(data => reject(data));
-            }
-          });
-      });
+  //           // check if the call was successful
+  //           if (response.ok) {
+  //             response.json().then(data => resolve(data));
+  //           } else {
+  //             response.json().then(data => reject(data));
+  //           }
+  //         });
+  //     });
 
-      promise.then((data) => {
-        // here we get address suggestions
-        console.log(data);
-      }, (err) => {
-        if (!err.canceled) {
-          console.log(err);
-        }
-      });
-    }, DEBOUNCE_DELAY);
-  });
+  //     promise.then((data) => {
+  //       // here we get address suggestions
+  //       console.log(data);
+  //     }, (err) => {
+  //       if (!err.canceled) {
+  //         console.log(err);
+  //       }
+  //     });
+  //   }, DEBOUNCE_DELAY);
+  
 }
-
-
+document.addEventListener('DOMContentLoaded', function () {
+  searchBtn.addEventListener("click", addressAutocomplete)
+});
 
 
