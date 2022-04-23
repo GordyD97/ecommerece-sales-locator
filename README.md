@@ -18,7 +18,12 @@ Credits:
 - Steffan Carter
 - Chris McHenry
 
-
+## Screenshots
 Deployed Site : https://gordyd97.github.io/ecommerece-sales-locator/
 
+### Deployed Site
 ![screen shot of site](./images/proj1sitePNG.PNG)
+### Manga Search 
+![Manga top 5](./images/manga-top-five.png)
+### Anime Search 
+![Anime top 5](./images/anime-top-five%20.png)
