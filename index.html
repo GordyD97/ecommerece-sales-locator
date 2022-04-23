@@ -4,74 +4,55 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <!-- Leaflet Map API link -->
-    <script
-      type="text/javascript"
-      src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js"
-    ></script>
-    <!-- Map stylesheet link -->
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css"
-    />
+    <title>Anime Paradise</title> 
+     <!-- Leaflet Map API link -->
+     <script
+     type="text/javascript"
+     src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js"
+   ></script>
+   <!-- Map stylesheet link -->
+   <link
+     rel="stylesheet"
+     type="text/css"
+     href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css"
+   />
     <link rel="stylesheet" href="./assets/style.css">
 </head>
 <body>
-    <!-- add jquery, add bootsrap -->   
-<!-- <nav class="navbar">
-          <a href="#">Navbar</a>
-          <button type="button">
-            <span></span>
-          </button>
-          <div>
-            <ul>
-              <li>
-                <a href="#">Home</a>
-              </li>
-              <li>
-                <ahref="#">Features</a>
-              </li>
-              <li>
-                <a href="#">Pricing</a>
-              </li>
-              <li>
-                <a>Disabled</a>
-              </li>
-            </ul>
-          </div>
-</nav> -->
 <!-- Main page display -->
 <section class="product-container">  
-        <!-- Manga of the day panel -->
-        <div class="card cardTop">
-          
-          <h1><u>Manga of the day</u></h1>
-          <img src="./images/boruto.jpg" class="topImg">
-        </div>
-          <!-- Map panel -->
-          <div class="mapCard">
-            <div id="my-map" class="mapSty" ></div> 
-              <div class="dasMap">
-                <p>Let us help you find your closest store</p><input class="zipcode-input" placeholder="Enter ZipCode" style="width: 150px;">
-            <a href="#"><button id="searchBtn">Zip Zap</button></a>
-            </div>
-          </div>
-    <!-- Top 5 panel -->
-    <article class="mangaBttm">
-      <div class="card" id="botList">
-        <div class="card-body">
-          <h5>Top 5</h5>
-          <p><input style="border-radius: 10px;" placeholder="Enter Keyword" id="newManga">
-            &nbsp
-          <a href="#4" class="fetch-button" id="btnFind"><button class="searchBtn">Find</button></a></p>
-          <p class="card-text"><ul id="listEl"></ul></p>
-          
-          
-        </div>
+        <!-- Main page display -->
+<section class="product-container">  
+  <!-- Manga of the day panel -->
+  <div class="card cardTop">
+    
+    <h1><u>Manga of the day</u></h1>
+    <img src="./images/boruto.jpg" class="topImg">
+  </div>
+    <!-- Map panel -->
+    <div class="mapCard">
+      <div id="my-map" class="mapSty" ></div> 
+        <div class="dasMap">
+          <p>Let us help you find your closest store</p><input class="zipcode-input" placeholder="Enter ZipCode" style="width: 150px;">
+      <a href="#"><button id="searchBtn">Zip Zap</button></a>
       </div>
-    </article>
+    </div>
+    <!-- Top 5 panel -->
+  <article class="mangaBttm">
+    <div class="card" id="botList">
+      <div class="card-body">
+        <p>Top 5</p>
+        <input style="border-radius: 10px;" placeholder="Enter Keyword" id="newManga">
+          &nbsp
+        <a href="#4" class="fetch-button" id="btnFind">
+          <button class="searchBtn">Manga</button></a>
+          &nbsp
+          <a href="#4" class="fetch-anime" id="btnFind">
+          <button class="searchBtn">Anime</button></a>
+        <p class="card-text"><ul id="mangaEl"></ul></p>
+      </div>
+    </div>
+  </article>
 </section>
 <!-- <footer>
         <ul class="nav justify-content-center border-bottom pb-3 mb-3">
@@ -85,6 +66,7 @@
 </footer> -->
 
     <!-- <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script> -->
-    <script type="text/javascript" src="./assets/script.js" defer="defer"></script>
+    <script type="text/javascript" src="./assets/script.js"></script>
+    <script type="text/javascript" src="./assets/anime.js"></script>
 </body>
 </html>
