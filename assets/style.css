@@ -126,7 +126,7 @@ footer{
 /* Stylesheet for page content */
 .product-container{
     display: flex;
-    background-color: rgb(53, 52, 52);
+    /* background-color: rgb(53, 52, 52); */
     flex-direction: column;
     position: relative;
     margin-bottom: 0px;
@@ -175,7 +175,7 @@ footer{
       overflow: auto;
       position: relative;
       flex-direction: column;
-      word-wrap: break-word;
+      /* word-wrap: break-word; */
       background-color: #fff;
       background-clip: border-box;
       border: 1px solid rgba(0,0,0,.125);
@@ -211,7 +211,7 @@ footer{
   
   /* "Top 5" panel stylesheet */
   #listEl li{
-    width: 50%;
+    /* width: 50%; */
     background-color: white;
     border-radius: 20px;
     flex-direction: column;
@@ -233,6 +233,7 @@ footer{
     color:white;
     border-radius: 10px;
     height: 20px;
+    width: 100px;
   }
 /* Color of search button when cursor is hovering over it */
   .searchBtn:hover {
